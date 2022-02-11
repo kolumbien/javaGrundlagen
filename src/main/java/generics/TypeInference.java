@@ -18,6 +18,12 @@ public class TypeInference {
         List<String> list = new ArrayList<>();
     }
 
+    static <T> List<T> add(List<T> list, T item1, T item2){
+        list.add(item1);
+        list.add(item2);
+        return list;
+    }
+
     public static <T> void addStore(T t, List<Bucket<T>> list){
         Bucket<T>  bucket = new Bucket<>();
         bucket.setItem(t);
@@ -33,6 +39,9 @@ public class TypeInference {
 
         //type "witness": le decimos al compiler que no haga el type inference, que son String
         TypeInference.<String>addStore("Daniel", list);
+
+        List<Integer> list1 = add(new ArrayList<>(),20,30);
+        System.out.println(list1);
 
     }
 }
