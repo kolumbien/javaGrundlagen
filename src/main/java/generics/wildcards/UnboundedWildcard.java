@@ -1,4 +1,13 @@
-package generics;
+package generics.wildcards;
+
+/**
+ * List<Intger> lits is NOT a subtype of List<Number> --> consider wildcards
+ *
+ * the supertype of all kinds of collections are wildcards:
+ *
+ *  List<Integer> is a subtype of Collection<?>
+ *
+ */
 
 import java.util.Arrays;
 import java.util.List;
