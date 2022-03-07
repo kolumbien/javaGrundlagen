@@ -11,7 +11,7 @@ public class ConstructorExample {
 		// WE CAN INSTANTIATE A CLASS WITH REFLECTION 
 		// DESPITE THE FACT THAT IT HAS PRIVATE CONSTRUCTOR !!!
 		
-		// we can instantiate a new class
+		// we can instantiate a new class even if the constructor is private!!
 		constructor.setAccessible(true);
 		Test test = constructor.newInstance();	
 		System.out.println(test);
